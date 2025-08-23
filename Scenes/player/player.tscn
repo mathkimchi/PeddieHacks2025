@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://l7r7487qly7a"]
+[gd_scene load_steps=5 format=3 uid="uid://l7r7487qly7a"]
 
 [ext_resource type="Script" uid="uid://6ghuowgmbyj7" path="res://Scenes/player/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://3mx4150x8fiu" path="res://icon.svg" id="1_v0iea"]
+[ext_resource type="PackedScene" uid="uid://crolgigj0sjc6" path="res://Scenes/poopGun/poopGun.tscn" id="3_mxepk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 
@@ -14,3 +15,6 @@ texture = ExtResource("1_v0iea")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_cvnsp")
+
+[node name="PoopGun" parent="." instance=ExtResource("3_mxepk")]
+position = Vector2(14, 22)

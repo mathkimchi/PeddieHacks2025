@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://do5na1qsvv3wi"]
+[gd_scene load_steps=4 format=3 uid="uid://do5na1qsvv3wi"]
 
 [ext_resource type="Script" uid="uid://cemxvfhcxbtqv" path="res://Scenes/poopBullet/poop_bullet.gd" id="1_xbxi4"]
+[ext_resource type="Texture2D" uid="uid://3mx4150x8fiu" path="res://icon.svg" id="2_rmxqy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36c53"]
 
 [node name="PoopBullet" type="Node2D"]
 script = ExtResource("1_xbxi4")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_36c53")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_rmxqy")
