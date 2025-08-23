@@ -10,9 +10,10 @@ func _ready() -> void:
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
+	# >>> Movement Logic >>>
 	if !is_on_floor():
-		velocity.y -= delta*gravity
+		velocity.y -= delta * gravity
 	else:
 		if Input.is_action_pressed("ui_up"):
 			velocity.y = -jump
@@ -22,3 +23,7 @@ func _process(delta: float) -> void:
 	velocity.x = speed * h_direction
 
 	move_and_slide()
+	# <<< Movement Logic <<<
+	
+func eat(food_group: AbstractFood.FoodGroup, nutritional_value: float):
+	print("Fed %s %s" % [food_group, nutritional_value])
