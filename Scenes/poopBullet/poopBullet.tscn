@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://do5na1qsvv3wi"]
+
+[ext_resource type="Script" uid="uid://cemxvfhcxbtqv" path="res://Scenes/poopBullet/poop_bullet.gd" id="1_xbxi4"]
+
+[node name="PoopBullet" type="Node2D"]
+script = ExtResource("1_xbxi4")
