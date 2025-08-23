@@ -18,3 +18,5 @@ shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="PoopGun" parent="." instance=ExtResource("3_mxepk")]
 position = Vector2(14, 22)
+
+[node name="MainCam" type="Camera2D" parent="."]
