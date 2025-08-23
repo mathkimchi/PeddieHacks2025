@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=4 uid="uid://bcvgeyh0qddc1"]
+
+[ext_resource type="PackedScene" uid="uid://l7r7487qly7a" path="res://Scenes/player/player.tscn" id="1_7ysj8"]
+[ext_resource type="TileSet" uid="uid://dj7hgi2dqn0k4" path="res://Assets/Tilesets/Ground_Tileset.tres" id="2_a5lnj"]
+[ext_resource type="TileSet" uid="uid://btlysacor72at" path="res://Assets/Tilesets/Props_Tileset.tres" id="3_bou62"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_7ysj8")]
+jump = 200
+
+[node name="TileMap" type="Node2D" parent="."]
+
+[node name="Ground" type="TileMapLayer" parent="TileMap"]
+tile_map_data = PackedByteArray("AAD8/wIAAQAEAAMAAAD9/wIAAQAEAAMAAAD+/wIAAQAEAAMAAAD//wIAAQAEAAMAAAAAAAIAAQAEAAMAAAABAAIAAQAEAAMAAAACAAIAAQAEAAMAAAADAAIAAQAEAAMAAAAEAAIAAQAEAAMAAAAFAAIAAQAEAAMAAAA=")
+tile_set = ExtResource("2_a5lnj")
+
+[node name="Props" type="TileMapLayer" parent="TileMap"]
+tile_set = ExtResource("3_bou62")

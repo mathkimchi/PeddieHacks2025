@@ -17,6 +17,6 @@ texture = ExtResource("1_v0iea")
 shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="PoopGun" parent="." instance=ExtResource("3_mxepk")]
-position = Vector2(14, 22)
+position = Vector2(11, 7)
 
 [node name="MainCam" type="Camera2D" parent="."]
