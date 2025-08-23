@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt2ht40xq1jwn"
-path="res://.godot/imported/TX Chest Animation.png-10c73b9c5ccfeff6a701a3158c7e4dca.ctex"
+uid="uid://dav2yktmgf51s"
+path="res://.godot/imported/TX Tileset Ground.png-d0d6681bc9157c1e1ec36ab16cb05a12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TX Chest Animation.png"
-dest_files=["res://.godot/imported/TX Chest Animation.png-10c73b9c5ccfeff6a701a3158c7e4dca.ctex"]
+source_file="res://Assets/PNG/TX Tileset Ground.png"
+dest_files=["res://.godot/imported/TX Tileset Ground.png-d0d6681bc9157c1e1ec36ab16cb05a12.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kkht78pqupf7"
-path="res://.godot/imported/TX Village Props.png-7252c642fb18166b25497e2e4451a0f4.ctex"
+uid="uid://4xe6w5lal67t"
+path="res://.godot/imported/TX FX Flame.png-41d9540103f179a82f684dd630b61e3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TX Village Props.png"
-dest_files=["res://.godot/imported/TX Village Props.png-7252c642fb18166b25497e2e4451a0f4.ctex"]
+source_file="res://Assets/PNG/TX FX Flame.png"
+dest_files=["res://.godot/imported/TX FX Flame.png-41d9540103f179a82f684dd630b61e3e.ctex"]
 
 [params]
 
