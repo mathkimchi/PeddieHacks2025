@@ -5,12 +5,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_36c53"]
 
-[node name="PoopBullet" type="Node2D"]
+[node name="PoopBullet" type="Area2D"]
 script = ExtResource("1_xbxi4")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_36c53")
 
