@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cl31xq1mj7waa"]
+
+[ext_resource type="Script" uid="uid://c4tj8tk8oucax" path="res://Scenes/food_spawner/basic_food_spawner.gd" id="1_4jnd7"]
+[ext_resource type="PackedScene" uid="uid://bpu87mwl5ygk8" path="res://Scenes/food/chicken_wing.tscn" id="2_4ejpb"]
+[ext_resource type="Texture2D" uid="uid://3mx4150x8fiu" path="res://icon.svg" id="2_ftdla"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ejpb"]
+
+[node name="ChickenShop" type="Area2D"]
+script = ExtResource("1_4jnd7")
+food = ExtResource("2_4ejpb")
+spawn_offset = Vector2(0, -20)
+metadata/_custom_type_script = "uid://c4tj8tk8oucax"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4ejpb")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(0.15625, 0.15625)
+texture = ExtResource("2_ftdla")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

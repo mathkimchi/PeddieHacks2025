@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp50jcthcik36"]
+
+[ext_resource type="Script" uid="uid://bghwudmmo8fe" path="res://Scenes/food/basic_food.gd" id="1_badym"]
+[ext_resource type="Texture2D" uid="uid://ccfseltnox62s" path="res://Assets/Sprites/vegtable.png" id="2_f7j6a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqh1m"]
+size = Vector2(34, 21)
+
+[node name="Spinach" type="Area2D"]
+script = ExtResource("1_badym")
+food_group = 2
+nutrition = 20.0
+metadata/_custom_type_script = "uid://bghwudmmo8fe"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_oqh1m")
+
+[node name="Vegtable" type="Sprite2D" parent="."]
+position = Vector2(1.00002, -0.999992)
+scale = Vector2(0.0377604, 0.0402778)
+texture = ExtResource("2_f7j6a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

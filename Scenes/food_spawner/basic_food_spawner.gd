@@ -27,4 +27,6 @@ func _on_area_entered(body: Node2D) -> void:
 		get_tree().create_timer(spawn_cooldown).timeout.connect(func (): self.can_spawn=true)
 		# <<< Spawn Cooldown <<<
 		
+		body.queue_free() # kill the bullet if it actually spawned food, otherwise, leave the bullet alone
+		
 		print("Hi")
