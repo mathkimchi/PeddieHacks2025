@@ -42,8 +42,7 @@ func _physics_process(delta: float) -> void:
 	# >>> Food Logic >>>
 	for i in len(nutrients):
 		nutrients[i] -= delta * nutrient_decay
-	
-	print("Nutrients: %s" % [nutrients])
+	#print("Nutrients: %s" % [nutrients])
 	# <<< Food Logic <<<
 	
 	# If player is touching an enemy, then damage player slowly
