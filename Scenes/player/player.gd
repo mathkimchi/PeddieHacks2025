@@ -21,7 +21,7 @@ var nutrients = [50, 50, 50, 50] # corresponds to grain, fruit, veggie, protein 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	%HealthBar.max_value = MAX_HEALTH
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -50,6 +50,9 @@ func _physics_process(delta: float) -> void:
 	for body in %DamageArea.get_overlapping_bodies():
 		if body.is_in_group("cow"):
 			self.take_damage(delta * ENEMY_DPS)
+	
+	# update health bar
+	%HealthBar.value = health
 	
 func eat(food_group: AbstractFood.FoodGroup, nutritional_value: float):
 	print("Ate %s %s" % [food_group, nutritional_value])
