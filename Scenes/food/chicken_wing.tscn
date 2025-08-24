@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpu87mwl5ygk8"]
 
 [ext_resource type="Script" uid="uid://bghwudmmo8fe" path="res://Scenes/food/basic_food.gd" id="1_1i4ca"]
-[ext_resource type="Texture2D" uid="uid://3mx4150x8fiu" path="res://icon.svg" id="2_ag7ao"]
+[ext_resource type="Texture2D" uid="uid://bxbxdrpdvntwb" path="res://Assets/Sprites/protein.png" id="2_ag7ao"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ot3d"]
 
@@ -14,9 +14,8 @@ metadata/_custom_type_script = "uid://bghwudmmo8fe"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_3ot3d")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(0.5, 0)
-scale = Vector2(0.164062, 0.15625)
+[node name="Protein" type="Sprite2D" parent="."]
+scale = Vector2(0.0208333, 0.0212963)
 texture = ExtResource("2_ag7ao")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

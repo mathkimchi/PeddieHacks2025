@@ -1,9 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://5eu8q8dv707c"]
 
 [ext_resource type="Script" uid="uid://bghwudmmo8fe" path="res://Scenes/food/basic_food.gd" id="1_yyxwh"]
-[ext_resource type="Texture2D" uid="uid://3mx4150x8fiu" path="res://icon.svg" id="2_gd6et"]
+[ext_resource type="Texture2D" uid="uid://cpqet3gxmchgj" path="res://Assets/Sprites/grain.png" id="2_gd6et"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_747xw"]
+size = Vector2(16, 23)
 
 [node name="Bread" type="Area2D"]
 script = ExtResource("1_yyxwh")
@@ -11,11 +12,12 @@ nutrition = 20.0
 metadata/_custom_type_script = "uid://bghwudmmo8fe"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_747xw")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(0.5, 0)
-scale = Vector2(0.164062, 0.15625)
+[node name="Grain" type="Sprite2D" parent="."]
+position = Vector2(4, 2)
+scale = Vector2(0.046875, 0.0395834)
 texture = ExtResource("2_gd6et")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
