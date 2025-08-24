@@ -41,3 +41,6 @@ func _physics_process(delta: float) -> void:
 	apply_gravity(delta)
 	move_and_slide()
 	# <<< Apply Movement Physics <<<
+
+func hit_with_bullet():
+	self.queue_free()

@@ -17,8 +17,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	# TODO: damage enemy
-	# if body.is_in_group("Enemies"):
-	# 	body.take_damage(25)
-	# 	self.queue_free() # self destruct
+	if body.is_in_group("cow"):
+		#body.take_damage(25)
+		body.hit_with_bullet()
+		self.queue_free() # self destruct the bullet
 	pass

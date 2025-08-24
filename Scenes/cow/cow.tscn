@@ -5,7 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_asfwn"]
 
-[node name="Cow" type="CharacterBody2D"]
+[node name="Cow" type="CharacterBody2D" groups=["cow"]]
 script = ExtResource("1_asfwn")
 
 [node name="Icon" type="Sprite2D" parent="."]

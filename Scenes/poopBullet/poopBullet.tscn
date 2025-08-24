@@ -15,3 +15,5 @@ shape = SubResource("RectangleShape2D_36c53")
 [node name="Icon" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_rmxqy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
