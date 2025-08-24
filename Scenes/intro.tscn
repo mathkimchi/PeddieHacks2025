@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://gf5w0f0b6w4u"]
+[gd_scene load_steps=3 format=3 uid="uid://gf5w0f0b6w4u"]
 
 [ext_resource type="VideoStream" uid="uid://b382csw56iskj" path="res://Assets/Intro_Animation.OGV" id="1_b226h"]
+[ext_resource type="Script" uid="uid://c5lhpjnw8rpg5" path="res://Scenes/intro.gd" id="1_duh1u"]
 
 [node name="Intro" type="Node2D"]
+script = ExtResource("1_duh1u")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 anchors_preset = 8
@@ -19,5 +21,5 @@ grow_vertical = 2
 stream = ExtResource("1_b226h")
 autoplay = true
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="cutSceneCam" type="Camera2D" parent="."]
 zoom = Vector2(0.6, 0.6)
