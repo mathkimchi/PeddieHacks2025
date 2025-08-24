@@ -31,9 +31,9 @@ script = ExtResource("1_3ohsm")
 
 [node name="GrainBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = 15.0
+offset_left = 104.0
 offset_top = 15.0
-offset_right = 521.0
+offset_right = 610.0
 offset_bottom = 44.0
 theme_override_styles/background = SubResource("StyleBoxFlat_3ohsm")
 theme_override_styles/fill = SubResource("StyleBoxFlat_xfhgk")
@@ -41,9 +41,9 @@ value = 50.0
 
 [node name="FruitBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = 15.0
+offset_left = 104.0
 offset_top = 55.0
-offset_right = 521.0
+offset_right = 610.0
 offset_bottom = 84.0
 theme_override_styles/background = SubResource("StyleBoxFlat_4q5fk")
 theme_override_styles/fill = SubResource("StyleBoxFlat_htb6i")
@@ -51,9 +51,9 @@ value = 50.0
 
 [node name="VegetableBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = 15.0
+offset_left = 104.0
 offset_top = 95.0
-offset_right = 521.0
+offset_right = 610.0
 offset_bottom = 124.0
 theme_override_styles/background = SubResource("StyleBoxFlat_smger")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vhlwc")
@@ -61,10 +61,24 @@ value = 50.0
 
 [node name="ProteinBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = 15.0
+offset_left = 104.0
 offset_top = 135.0
-offset_right = 521.0
+offset_right = 610.0
 offset_bottom = 164.0
 theme_override_styles/background = SubResource("StyleBoxFlat_t5p8k")
 theme_override_styles/fill = SubResource("StyleBoxFlat_eirx7")
 value = 50.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 194.0
+offset_bottom = 162.0
+theme_override_font_sizes/normal_font_size = 14
+text = "Grain
+
+Fruit
+
+Vegetable
+
+Protein"

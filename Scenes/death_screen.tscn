@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bkj01kj54oe5t"]
+
+[node name="DeathScreen" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 334.0
+offset_top = 167.0
+offset_right = 1081.0
+offset_bottom = 417.0
+text = "you are ... DEAD!!!!"
