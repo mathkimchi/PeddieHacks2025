@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://che2dpgx37848"]
 
-[ext_resource type="Script" uid="uid://m71076gthrlb" path="res://Scenes/cow.gd" id="1_asfwn"]
+[ext_resource type="Script" uid="uid://m71076gthrlb" path="res://Scenes/cow/cow.gd" id="1_asfwn"]
 [ext_resource type="Texture2D" uid="uid://3mx4150x8fiu" path="res://icon.svg" id="1_ss0fy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_asfwn"]
