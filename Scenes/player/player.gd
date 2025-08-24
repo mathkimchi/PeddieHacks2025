@@ -10,6 +10,13 @@ extends CharacterBody2D
 @export var low_threshold = 30 # when a nutrient is below the low_threshold, there will be a penalty
 @export var nutrient_decay = 1 # how much each nutrient decreases per second
 
+@export
+var MAX_HEALTH = 100
+var health = MAX_HEALTH
+
+@export
+var ENEMY_DPS = 10
+
 var nutrients = [50, 50, 50, 50] # corresponds to grain, fruit, veggie, protein respectively
 
 # Called when the node enters the scene tree for the first time.
@@ -39,6 +46,22 @@ func _physics_process(delta: float) -> void:
 	print("Nutrients: %s" % [nutrients])
 	# <<< Food Logic <<<
 	
+	# If player is touching an enemy, then damage player slowly
+	for body in %DamageArea.get_overlapping_bodies():
+		if body.is_in_group("cow"):
+			self.take_damage(delta * ENEMY_DPS)
+	
 func eat(food_group: AbstractFood.FoodGroup, nutritional_value: float):
 	print("Ate %s %s" % [food_group, nutritional_value])
 	nutrients[food_group] += nutritional_value
+
+func take_damage(damage: float):
+	self.health -= damage
+	
+	if self.health < 0:
+		death_screen()
+
+# called on player death
+func death_screen():
+	get_tree().change_scene_to_file.call_deferred("res://Scenes/death_screen.tscn")
+	get_tree().current_scene.free()

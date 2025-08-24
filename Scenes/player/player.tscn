@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://l7r7487qly7a"]
+[gd_scene load_steps=6 format=3 uid="uid://l7r7487qly7a"]
 
 [ext_resource type="Script" uid="uid://6ghuowgmbyj7" path="res://Scenes/player/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://3mx4150x8fiu" path="res://icon.svg" id="1_v0iea"]
 [ext_resource type="PackedScene" uid="uid://crolgigj0sjc6" path="res://Scenes/poopGun/poopGun.tscn" id="3_mxepk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxepk"]
+size = Vector2(22, 22)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_cvnsp")
@@ -20,3 +23,9 @@ shape = SubResource("RectangleShape2D_cvnsp")
 position = Vector2(11, 7)
 
 [node name="MainCam" type="Camera2D" parent="."]
+
+[node name="DamageArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+shape = SubResource("RectangleShape2D_mxepk")
