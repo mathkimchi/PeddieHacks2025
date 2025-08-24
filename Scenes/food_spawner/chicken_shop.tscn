@@ -7,6 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ejpb"]
 
 [node name="ChickenShop" type="Area2D"]
+visible = false
 script = ExtResource("1_4jnd7")
 food = ExtResource("2_4ejpb")
 spawn_offset = Vector2(0, -20)

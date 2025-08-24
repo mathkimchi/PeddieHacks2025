@@ -7,6 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1i128"]
 
 [node name="SpinachBush" type="Area2D"]
+visible = false
 script = ExtResource("1_xpw7b")
 food = ExtResource("2_1i128")
 spawn_offset = Vector2(0, -20)

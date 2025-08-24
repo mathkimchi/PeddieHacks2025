@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61f8e"]
 
 [node name="AppleTree" type="Area2D"]
+visible = false
 script = ExtResource("1_61f8e")
 spawn_offset = Vector2(0, 20)
 metadata/_custom_type_script = "uid://c4tj8tk8oucax"

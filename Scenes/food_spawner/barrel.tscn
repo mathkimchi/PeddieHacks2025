@@ -7,12 +7,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3jhjf"]
 
 [node name="Barrel" type="Area2D"]
+visible = false
 script = ExtResource("1_rcl7a")
 food = ExtResource("2_3jhjf")
 spawn_offset = Vector2(0, -20)
 metadata/_custom_type_script = "uid://c4tj8tk8oucax"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_3jhjf")
 
 [node name="Icon" type="Sprite2D" parent="."]
