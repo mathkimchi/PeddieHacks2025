@@ -11,6 +11,14 @@ func shoot(event):
 	bullet.global_position = self.global_position
 	bullet.global_rotation = self.get_global_transform_with_canvas().get_origin().direction_to(event.position).angle()
 	
+	# >>> Play shoot sound >>>
+	const SOUND_PLAYER = preload("res://Scenes/temp_audio.tscn")
+	const SHOOT_SOUND = preload("res://Assets/SoundEffects/compressed/shoot poop.wav")
+	var sound_player_instance = SOUND_PLAYER.instantiate()
+	sound_player_instance.global_position = self.global_position
+	sound_player_instance.stream = SHOOT_SOUND
+	get_tree().root.add_child(sound_player_instance)
+	# <<< Play shoot sound <<<
 
 func _input(event) -> void:
 	if event.is_action_pressed("shoot"):
