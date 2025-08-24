@@ -56,9 +56,26 @@ func _physics_process(delta: float) -> void:
 func eat(food_group: AbstractFood.FoodGroup, nutritional_value: float):
 	print("Ate %s %s" % [food_group, nutritional_value])
 	nutrients[food_group] += nutritional_value
+	
+	# >>> Play eat sound >>>
+	const SOUND_PLAYER = preload("res://Scenes/temp_audio.tscn")
+	const SHOOT_SOUND = preload("res://Assets/SoundEffects/compressed/eat.wav")
+	var sound_player_instance = SOUND_PLAYER.instantiate()
+	sound_player_instance.global_position = self.global_position
+	sound_player_instance.stream = SHOOT_SOUND
+	get_tree().root.add_child(sound_player_instance)
+	# <<< Play eat sound <<<
 
 func take_damage(damage: float):
 	self.health -= damage
+	
+	# >>> Play player damage sound >>>
+	# Don't use TEMP_AUDIO player, because we want this to restart every time
+	if !%DamageAudioSpeaker.playing:
+		const SHOOT_SOUND = preload("res://Assets/SoundEffects/compressed/ouchies (player damaged).wav")
+		%DamageAudioSpeaker.stream = SHOOT_SOUND
+		%DamageAudioSpeaker.play()
+	# <<< Play player damage sound <<<
 	
 	if self.health < 0:
 		death_screen()
