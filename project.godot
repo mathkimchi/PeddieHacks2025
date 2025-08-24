@@ -15,6 +15,10 @@ run/main_scene="uid://diqu2n8vqpaqk"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Transition_Player="*res://Scenes/Transition_Player.tscn"
+
 [global_group]
 
 player=""

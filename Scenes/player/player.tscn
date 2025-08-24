@@ -11,6 +11,7 @@ size = Vector2(22, 22)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_cvnsp")
+jump = 300
 
 [node name="Icon" type="Sprite2D" parent="."]
 scale = Vector2(0.15625, 0.15625)
@@ -23,6 +24,8 @@ shape = SubResource("RectangleShape2D_cvnsp")
 position = Vector2(11, 7)
 
 [node name="MainCam" type="Camera2D" parent="."]
+offset = Vector2(0, -100)
+zoom = Vector2(1.2, 1.2)
 
 [node name="DamageArea" type="Area2D" parent="."]
 unique_name_in_owner = true
