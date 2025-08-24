@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://qowtqod0vb18"]
+
+[ext_resource type="Script" uid="uid://bwx68dwg5ppac" path="res://Scenes/Flag/flag.gd" id="1_jisdl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwtee"]
+size = Vector2(20, 162)
+
+[node name="Flag" type="Node2D"]
+script = ExtResource("1_jisdl")
+next = "filler"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_qwtee")

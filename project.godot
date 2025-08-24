@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PeddieHacks2025"
-run/main_scene="uid://diqu2n8vqpaqk"
+run/main_scene="uid://gf5w0f0b6w4u"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

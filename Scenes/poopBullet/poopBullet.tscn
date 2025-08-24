@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_36c53"]
 
 [node name="PoopBullet" type="Area2D" groups=["bullet"]]
+scale = Vector2(0.25, 0.25)
 script = ExtResource("1_xbxi4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

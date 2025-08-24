@@ -22,5 +22,4 @@ stream = ExtResource("2_duh1u")
 autoplay = true
 
 [node name="cutSceneCam" type="Camera2D" parent="."]
-enabled = false
 zoom = Vector2(0.6, 0.6)
