@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://diqu2n8vqpaqk"]
+[gd_scene load_steps=11 format=4 uid="uid://diqu2n8vqpaqk"]
 
 [ext_resource type="PackedScene" uid="uid://l7r7487qly7a" path="res://Scenes/player/player.tscn" id="1_707cn"]
 [ext_resource type="TileSet" uid="uid://dj7hgi2dqn0k4" path="res://Assets/Tilesets/Ground_Tileset.tres" id="2_mq1bj"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://defkjqcrsx5a8" path="res://Scenes/ui/main_hud.tscn" id="5_iwv7r"]
 [ext_resource type="PackedScene" uid="uid://che2dpgx37848" path="res://Scenes/cow/cow.tscn" id="6_kt01x"]
 [ext_resource type="PackedScene" uid="uid://ci2evvcmquxkb" path="res://Scenes/food_spawner/apple_tree.tscn" id="7_p7j4p"]
+[ext_resource type="PackedScene" uid="uid://dyrdu0tktdvr2" path="res://Scenes/food_spawner/barrel.tscn" id="8_yrarp"]
+[ext_resource type="PackedScene" uid="uid://cl31xq1mj7waa" path="res://Scenes/food_spawner/chicken_shop.tscn" id="9_5qo1a"]
+[ext_resource type="PackedScene" uid="uid://udom3krl5yff" path="res://Scenes/food_spawner/spinach_bush.tscn" id="10_bgy8c"]
 
 [node name="World" type="Node2D"]
 
@@ -33,3 +36,12 @@ position = Vector2(87, 262)
 
 [node name="AppleTree" parent="." instance=ExtResource("7_p7j4p")]
 position = Vector2(688, 293)
+
+[node name="Barrel" parent="." instance=ExtResource("8_yrarp")]
+position = Vector2(-40, 259)
+
+[node name="ChickenShop" parent="." instance=ExtResource("9_5qo1a")]
+position = Vector2(151, 341)
+
+[node name="SpinachBush" parent="." instance=ExtResource("10_bgy8c")]
+position = Vector2(570, 372)
