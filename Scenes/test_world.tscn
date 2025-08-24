@@ -1,17 +1,15 @@
-[gd_scene load_steps=5 format=4 uid="uid://diqu2n8vqpaqk"]
+[gd_scene load_steps=6 format=4 uid="uid://diqu2n8vqpaqk"]
 
 [ext_resource type="PackedScene" uid="uid://l7r7487qly7a" path="res://Scenes/player/player.tscn" id="1_707cn"]
 [ext_resource type="TileSet" uid="uid://dj7hgi2dqn0k4" path="res://Assets/Tilesets/Ground_Tileset.tres" id="2_mq1bj"]
 [ext_resource type="TileSet" uid="uid://btlysacor72at" path="res://Assets/Tilesets/Props_Tileset.tres" id="3_iwv7r"]
 [ext_resource type="PackedScene" uid="uid://bh27lljtl7s5o" path="res://Scenes/food/apple.tscn" id="4_mq1bj"]
+[ext_resource type="PackedScene" uid="uid://defkjqcrsx5a8" path="res://Scenes/ui/main_hud.tscn" id="5_iwv7r"]
 
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_707cn")]
 position = Vector2(301, 178)
-speed = 200
-gravity = -800
-jump = 500
 
 [node name="TileMap" type="Node2D" parent="."]
 
@@ -25,3 +23,5 @@ tile_set = ExtResource("3_iwv7r")
 
 [node name="Apple" parent="." instance=ExtResource("4_mq1bj")]
 position = Vector2(426, 345)
+
+[node name="MainHud" parent="." instance=ExtResource("5_iwv7r")]

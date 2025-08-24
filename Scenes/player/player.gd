@@ -1,9 +1,16 @@
+class_name Player
 extends CharacterBody2D
 
 # define world constants
 @export var speed = 200
 @export var gravity = -800
 @export var jump = 500
+
+@export var max_nutrient = 100
+@export var low_threshold = 30 # when a nutrient is below the low_threshold, there will be a penalty
+@export var nutrient_decay = 1 # how much each nutrient decreases per second
+
+var nutrients = [50, 50, 50, 50] # corresponds to grain, fruit, veggie, protein respectively
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,5 +32,13 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	# <<< Movement Logic <<<
 	
+	# >>> Food Logic >>>
+	for i in len(nutrients):
+		nutrients[i] -= delta * nutrient_decay
+	
+	print("Nutrients: %s" % [nutrients])
+	# <<< Food Logic <<<
+	
 func eat(food_group: AbstractFood.FoodGroup, nutritional_value: float):
-	print("Fed %s %s" % [food_group, nutritional_value])
+	print("Ate %s %s" % [food_group, nutritional_value])
+	nutrients[food_group] += nutritional_value

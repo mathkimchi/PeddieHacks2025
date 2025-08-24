@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://defkjqcrsx5a8"]
+
+[ext_resource type="Script" uid="uid://borhdrpp86hhs" path="res://Scenes/ui/main_hud.gd" id="1_3ohsm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ohsm"]
+bg_color = Color(0.760784, 0.584314, 0.192157, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfhgk"]
+bg_color = Color(0.790616, 0.712387, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4q5fk"]
+bg_color = Color(4.33177e-06, 0.660679, 0.841436, 0.247059)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htb6i"]
+bg_color = Color(1.44392e-06, 0.673055, 0.773692, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_smger"]
+bg_color = Color(0, 0.717647, 0.352941, 0.309804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vhlwc"]
+bg_color = Color(0.44562, 0.783306, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5p8k"]
+bg_color = Color(1, 0.176471, 0.2, 0.384314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eirx7"]
+bg_color = Color(0.8, 0.145098, 0.145098, 1)
+
+[node name="MainHud" type="CanvasLayer"]
+script = ExtResource("1_3ohsm")
+
+[node name="GrainBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 521.0
+offset_bottom = 44.0
+theme_override_styles/background = SubResource("StyleBoxFlat_3ohsm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xfhgk")
+value = 50.0
+
+[node name="FruitBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = 15.0
+offset_top = 55.0
+offset_right = 521.0
+offset_bottom = 84.0
+theme_override_styles/background = SubResource("StyleBoxFlat_4q5fk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_htb6i")
+value = 50.0
+
+[node name="VegetableBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = 15.0
+offset_top = 95.0
+offset_right = 521.0
+offset_bottom = 124.0
+theme_override_styles/background = SubResource("StyleBoxFlat_smger")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vhlwc")
+value = 50.0
+
+[node name="ProteinBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = 15.0
+offset_top = 135.0
+offset_right = 521.0
+offset_bottom = 164.0
+theme_override_styles/background = SubResource("StyleBoxFlat_t5p8k")
+theme_override_styles/fill = SubResource("StyleBoxFlat_eirx7")
+value = 50.0

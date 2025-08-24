@@ -1,7 +1,7 @@
 class_name AbstractFood
 extends Area2D
 
-enum FoodGroup { GRAIN, FRUIT, VEGETABLE, MEAT }
+enum FoodGroup { GRAIN, FRUIT, VEGETABLE, PROTEIN }
 
 static var group_name = "food"
 
